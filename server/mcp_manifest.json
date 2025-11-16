@@ -1,0 +1,32 @@
+{
+  "name": "crypto-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP server providing real-time and historical cryptocurrency data.",
+  
+  "endpoints": {
+    "manifest": "/mcp/manifest.json",
+    "invoke": "/mcp/invoke"
+  },
+
+  "capabilities": [
+    {
+      "name": "get_price",
+      "description": "Retrieve the latest price for a cryptocurrency symbol.",
+      "params": {
+        "symbol": "Ticker or id, e.g. BTC or bitcoin."
+      }
+    },
+    {
+      "name": "get_history",
+      "description": "Retrieve historical price data for a cryptocurrency.",
+      "params": {
+        "symbol": "Ticker or id, e.g. BTC or bitcoin.",
+        "days": "Number of days of history."
+      }
+    },
+    {
+      "name": "supported",
+      "description": "List the supported cryptocurrencies."
+    }
+  ]
+}
